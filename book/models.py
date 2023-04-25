@@ -14,6 +14,9 @@ from django.db import models
 class BookInfo(models.Model):
     #id
     name=models.CharField(max_length=10)
+    # 重写 str方法让admin来现实书记的名字
+    def __str__(self):
+        return self.name
 
 #人物 后期讲原理
 class PeopleInfo(models.Model):
