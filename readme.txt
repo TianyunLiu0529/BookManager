@@ -1,4 +1,4 @@
-token: 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
+token: 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
 
 Superuser: liu
 	 : zmwxf0418
