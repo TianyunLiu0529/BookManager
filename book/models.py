@@ -13,14 +13,14 @@ from django.db import models
 """
 class BookInfo(models.Model):
     #id
-    name=models.CharField(max_length=10)
+    name=models.CharField(max_length=20)
     # 重写 str方法让admin来现实书记的名字
     def __str__(self):
         return self.name
 
 #人物 后期讲原理
 class PeopleInfo(models.Model):
-    name=models.CharField(max_length=10)
+    name=models.CharField(max_length=20)
     gender=models.BooleanField()
     #外键约束：人物属于哪本书
     book=models.ForeignKey(BookInfo, on_delete=models.CASCADE)
